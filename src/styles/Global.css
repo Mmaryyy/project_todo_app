@@ -1,0 +1,14 @@
+:root {
+    /*color chip*/
+    --maincolor: #075082;
+    --weekend: #17A1FA;
+    --skyblue: #8EBEE1;
+    --pastelblue: #D4E2E1;
+    --gray_100: #EEEEEE;
+    --gray_200: #E1E1E1;
+    --content-main: #5F5F5F;
+
+    /* font size */
+    --title: 20px;
+    --content: 15px;
+}
