@@ -1,6 +1,8 @@
-import './styles/GlobalStyle';
 import { Fragment, useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux'
+import { getCollectionData } from './firebase/api.js';
+import { fetchTodo } from './actions/index.js';
 import GlobalStyle from './styles/GlobalStyle.js'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -19,11 +21,20 @@ import Create from './components/Create';
 
 function App() {
   const [isReady, setIsReady] = useState(true)
+  const dispatch = useDispatch()
+  //전역으로 넣기
   // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsReady(true)
-  //   }, 5000)
-  // }, [])
+    //   setTimeout(() => {
+      //     setIsReady(true)
+      //   }, 5000)
+      // }, [])
+      useEffect (() => {
+        // 스토어에 저장하기
+        let data = fetchTodo('todoList')
+        console.log(data)
+      }, [])
+  const todoList = useSelector(state => state.todoReducer)
+  
   return (
     <BrowserRouter>
       <div className='app-wrap'>

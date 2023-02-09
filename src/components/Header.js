@@ -24,7 +24,7 @@ const TitleContainer = styled.div`
 `
 const Title = styled.span`
   font-weight: 900;
-  color: var(--content-main);
+  color: var(--color-content);
   font-size: var(--title);
 `
 const Header = () => {
