@@ -1,18 +1,19 @@
 import { FETCH_TODO, ADD_TODO, UPDATE_TODO, DELETE_TODO } from "../actions"
+import { getCollectionData } from "../firebase/api"
 
-const initialState = [{
-    todo: 'init',
-    isDone: false
-}]
+const initialState = {
+    todoList: []
+}
 
 const todoReducer = (state = initialState, action) => {
     switch (action.type) {
         // action에 따라서 state를 변경한 다음 변경된 state를 리턴
         case 'FETCH_TODO':
             // 새로운 객체 (다른 주소) 만들어서 리턴해줘야 변경 감지
-            return [
-                ...action.payload
-            ]
+            return {
+                ...state,
+                todoList: action.payload
+            }
         case 'ADD_TODO':
             // 새로운 객체 (다른 주소) 만들어서 리턴해줘야 변경 감지
             return {

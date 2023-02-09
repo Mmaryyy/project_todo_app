@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Container = styled.div`
+export const ColumnContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,7 +8,18 @@ export const Container = styled.div`
   background: ${props => props.background || 'none'};
   padding: 15px;
   color: ${props => props.color || 'var(--gray_200)'};
+  position: ${props => props.position || 'relative'};
 `
+export const LowContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: ${props => props.background || 'none'};
+  padding: 15px;
+  color: ${props => props.color || 'var(--gray_200)'};
+  margin-bottom: ${props => props.margin || 0};
+`
+
 export const Link = styled.a`
     text-decoration: none;
     color: ${props => props.color || 'white'};

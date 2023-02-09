@@ -22,18 +22,12 @@ import Create from './components/Create';
 function App() {
   const [isReady, setIsReady] = useState(true)
   const dispatch = useDispatch()
-  //전역으로 넣기
-  // useEffect(() => {
-    //   setTimeout(() => {
-      //     setIsReady(true)
-      //   }, 5000)
-      // }, [])
       useEffect (() => {
         // 스토어에 저장하기
-        let data = fetchTodo('todoList')
-        console.log(data)
+        dispatch(fetchTodo('todoList'))
       }, [])
-  const todoList = useSelector(state => state.todoReducer)
+  const { todoList } = useSelector(state => state.todoReducer)
+  console.log(todoList)
   
   return (
     <BrowserRouter>
