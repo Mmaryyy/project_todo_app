@@ -11,7 +11,6 @@ const TodoContainer = styled.div`
   margin-top: 10px;
 `
 
-
 const Index = () => {
   return (
     <div>

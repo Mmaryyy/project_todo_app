@@ -1,8 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+import { Container, ImgContainer } from '../styles/styled-components'
 
 const Nav = () => {
   return (
-    <div>Nav</div>
+    <Container>
+      <ImgContainer src='' alt=''></ImgContainer>
+      <ImgContainer src='' alt=''></ImgContainer>
+      <ImgContainer src='' alt=''></ImgContainer>
+      <ImgContainer src='' alt=''></ImgContainer>
+    </Container>
   )
 }
 
